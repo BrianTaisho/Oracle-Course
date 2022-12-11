@@ -1,0 +1,71 @@
+
+<meta charset="UTF-8">
+
+<h1>Programacion calcular el IMC</h1>
+
+
+<script>
+
+	function saltarlinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function print(frase) {
+
+		document.write(frase)
+		saltarlinea();
+	}
+	
+	function calcularIMC(peso,altura) {
+
+		imc = peso / (altura * altura);
+
+		return (imc);
+	
+	}
+	nombre = prompt("informe su nombre");
+	pesoinformado = prompt(nombre + ", Informe su peso:");
+	alturainformada = prompt(nombre + ", Informe su altura:");
+
+	imccalculado = calcularIMC(pesoinformado,alturainformada);
+
+	print(nombre + " su imc es: " + imccalculado);
+
+	if (imccalculado < 18.5) {
+		print("IMC abajo de lo recomendado");
+	}
+	
+	if (imccalculado >= 18.5 ) {
+
+		if (imccalculado < 25 ){
+
+			print("IMC esta dentro del intervalo normal");
+		}
+
+	}
+	
+	if (imccalculado >= 25); {
+		if (imccalculado < 30 ){
+
+			print("IMC corporal considerado como Sobre peso");
+		}
+
+	}
+	
+	if (imccalculado >= 30) {
+		print("IMC considerado como obecidad");
+	}
+
+
+
+	
+
+
+
+
+
+</script>
